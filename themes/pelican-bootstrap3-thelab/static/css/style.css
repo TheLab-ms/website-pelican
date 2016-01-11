@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Basic);
+
 body {
     padding-top: 70px;
 }
@@ -221,3 +223,69 @@ figure.floatcenter, .align-center {
         font-size: 16px;
     }
 }
+
+
+
+
+
+
+
+body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; }
+
+.text-black { color:#000000; }
+.text-magenta { color:#6c2940; }
+.text-dark-blue { color:#403578; }
+.text-purple { color:#d93cf0; }
+.text-dark-green { color:#135740; }
+.text-grey { color:#808080; }
+.text-medium-blue { color:#2697f0; }
+.text-light-blue { color:#bfb4f8; }
+.text-brown { color:#404b07; }
+.text-orange { color:#d9680f; }
+.text-pink { color:#eca8bf; }
+.text-green { color:#26c30f; }
+.text-yellow { color:#bfca87; }
+.text-aqua { color:#93d6bf; }
+.text-white { color:#ffffff; }
+
+.bg-black { background-color:#000000; }
+.bg-magenta { background-color:#6c2940; }
+.bg-dark-blue { background-color:#403578; }
+.bg-purple { background-color:#d93cf0; }
+.bg-dark-green { background-color:#135740; }
+.bg-grey { background-color:#808080; }
+.bg-medium-blue { background-color:#2697f0; }
+.bg-light-blue { background-color:#bfb4f8; }
+.bg-brown { background-color:#404b07; }
+.bg-orange { background-color:#d9680f; }
+.bg-pink { background-color:#eca8bf; }
+.bg-green { background-color:#26c30f; }
+.bg-yellow { background-color:#bfca87; }
+.bg-aqua { background-color:#93d6bf; }
+.bg-white { background-color:#ffffff; }
+
+.legos { display:block; position:relative; width:80%; height:20rem; margin:0.5rem auto 2rem; font-size:1.2rem; }
+.lego-title { font-size:6rem; height:1.2em; overflow:hidden; }
+.lego a { display:block; width:100%; height:100%; text-decoration:none; text-align:center; font-size:3em; }
+.lego a:hover { text-decoration:none; }
+.lego-h1 a { line-height:4.6rem; }
+.lego-h2 a { line-height:9.6rem; }
+.lego-h3 a { line-height:14.6rem; }
+.lego-h4 a { line-height:19.6rem; }
+.lego { display:block; position:absolute; border-radius:1rem; overflow:hidden; }
+.lego-w1 { width:23%; }
+.lego-w2 { width:48%; }
+.lego-w3 { width:73%; }
+.lego-w4 { width:98%; }
+.lego-h1 { height:23%; }
+.lego-h2 { height:48%; }
+.lego-h3 { height:73%; }
+.lego-h4 { height:98%; }
+.lego-x1 { left:1%; }
+.lego-x2 { left:26%; }
+.lego-x3 { left:51%; }
+.lego-x4 { left:76%; }
+.lego-y1 { top:1%; }
+.lego-y2 { top:26%; }
+.lego-y3 { top:51%; }
+.lego-y4 { top:76%; }
