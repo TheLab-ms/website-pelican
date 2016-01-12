@@ -249,31 +249,136 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; }
 .text-white { color:#ffffff; }
 
 .bg-black { background-color:#000000; }
+.bg-black.hoverableblack:hover { background-color:#464646; }
+/*
+#7f7e7e
+#464646
+#000000
+#030101
+*/
 .bg-magenta { background-color:#6c2940; }
+.bg-magenta.hoverable:hover { background-color:#88455b; }
+/*
+#a9687e
+#88455b
+#53152a
+#360515
+*/
 .bg-dark-blue { background-color:#403578; }
+.bg-dark-blue.hoverable:hover { background-color:#615795; }
+/*
+#8a82b3
+#615795
+#271d5d
+#130a3f
+*/
 .bg-purple { background-color:#d93cf0; }
+.bg-purple.hoverable:hover { background-color:#e265f4; }
+/*
+#ec96f8
+#e265f4
+#cf14e9
+#c102dc
+*/
 .bg-dark-green { background-color:#135740; }
+.bg-dark-green.hoverable:hover { background-color:#287059; }
+/*
+#4a8c76
+#287059
+#043c2a
+#002418
+*/
 .bg-grey { background-color:#808080; }
+.bg-grey.hoverable:hover { background-color:#acacac; }
+/*
+#dddcdc
+#acacac
+#4e4e4e
+#0a0a0a
+*/
 .bg-medium-blue { background-color:#2697f0; }
+.bg-medium-blue.hoverable:hover { background-color:#4eabf2; }
+/*
+#7abff4
+#4eabf2
+#0a89eb
+#0468b5
+*/
 .bg-light-blue { background-color:#bfb4f8; }
+.bg-light-blue.hoverable:hover { background-color:#e7e2fe; }
+/*
+#ffffff
+#e7e2fe
+#9c8bed
+#7966da
+*/
 .bg-brown { background-color:#404b07; }
+.bg-brown.hoverable:hover { background-color:#616f1a; }
+/*
+#829136
+#616f1a
+#252c00
+#101300
+*/
 .bg-orange { background-color:#d9680f; }
+.bg-orange.hoverable:hover { background-color:#f18b39; }
+/*
+#ffa965
+#f18b39
+#af4f02
+#873c00
+*/
 .bg-pink { background-color:#eca8bf; }
+.bg-pink.hoverable:hover { background-color:#f6cedb; }
+/*
+#fceef3
+#f6cedb
+#de7e9f
+#b94c71
+*/
 .bg-green { background-color:#26c30f; }
+.bg-green.hoverable:hover { background-color:#4dcb39; }
+/*
+#70da5f
+#4dcb39
+#1a9806
+#107700
+*/
 .bg-yellow { background-color:#bfca87; }
+.bg-yellow.hoverable:hover { background-color:#e7eebd; }
+/*
+#f6fae1
+#e7eebd
+#9daa5b
+#7b8738
+*/
 .bg-aqua { background-color:#93d6bf; }
+.bg-aqua.hoverable:hover { background-color:#c3edde; }
+/*
+#edfcf6
+#c3edde
+#65b89a
+#3f9a7a
+*/
 .bg-white { background-color:#ffffff; }
+.bg-white.hoverable:hover { background-color:#ffffff; }
+/*
+#ffffff
+#ffffff
+#cecece
+#a2a0a0
+*/
 
 .legos { display:block; position:relative; width:80%; height:20rem; margin:0.5rem auto 2rem; font-size:1.2rem; }
 .lego-title { font-size:6rem; height:1.2em; overflow:hidden; }
 .display-none { display:none; }
-.lego a { display:block; width:100%; height:100%; text-decoration:none; text-align:center; font-size:3em; }
-.lego a:hover { text-decoration:none; }
+.lego a { display:block; width:100%; height:100%; border-radius:1rem; text-decoration:none; text-align:center; font-size:3em; }
+.lego a:hover { text-decoration:none; margin-top:-2px; margin-left:-1px; }
 .lego-h1 a { line-height:4.6rem; }
 .lego-h2 a { line-height:9.6rem; }
 .lego-h3 a { line-height:14.6rem; }
 .lego-h4 a { line-height:19.6rem; }
-.lego { display:block; position:absolute; border-radius:1rem; overflow:hidden; }
+.lego { display:block; position:absolute; }
 .lego-w1 { width:23%; }
 .lego-w2 { width:48%; }
 .lego-w3 { width:73%; }
