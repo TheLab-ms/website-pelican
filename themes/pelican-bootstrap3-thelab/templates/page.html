@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "foundation/base.html" %}
 {% block title %}{{ page.title }} - {{ SITENAME }}{% endblock %}
 {% block html_lang %}{{ page.lang }}{% endblock %}
 {% block meta %}
@@ -46,9 +46,9 @@
 
 {% block content %}
     <section id="content" class="body">
-    {% if page.save_as == 'home.html' %}
+    {% if page.save_as == 'index.html' %}
         <div class="entry-content">
-        {% include 'includes/home.html' %}
+        {% include 'pages/home.html' %}
         </div>
     {% else %}
         <h1 class="entry-title">{{ page.title }}</h1>

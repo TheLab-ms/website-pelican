@@ -19,7 +19,7 @@ $(document).ready(function() {
         }
     });
 
-    window.setInterval(blinkLegoCursor, 800);
+    window.setInterval(blinkLegoCursor, 900);
     $legos.on('mouseenter', 'a', function() {
         $legoCursor.removeClass('display-none');
         if(typeof typeTimeout == "number") {
@@ -40,9 +40,9 @@ $(document).ready(function() {
     function blinkLegoCursor() {
         $('#lego-cursor').animate({
             opacity: 0
-        }, 'fast', 'swing').animate({
+        }, 300, 'swing').animate({
             opacity: 1
-        }, 'fast', 'swing');
+        }, 300, 'swing');
     }
 
     function handleLegoHeights(timestamp) {
@@ -53,17 +53,21 @@ $(document).ready(function() {
 
         resizeTimestamp = timestamp;
 
-        legosHeight = 0.66 * $legos.outerWidth();
+        legosHeight = 0.6 * $legos.outerWidth();
         $legos.height(legosHeight);
-        h1Height = 0.23 * legosHeight;
-        h2Height = 0.48 * legosHeight;
-        h3Height = 0.73 * legosHeight;
-        h4Height = 0.98 * legosHeight;
 
-        $legoH1s.css('line-height', h1Height+'px');
-        $legoH2s.css('line-height', h2Height+'px');
-        $legoH3s.css('line-height', h3Height+'px');
-        $legoH4s.css('line-height', h4Height+'px');
+        if($legoH1s.length) {
+            $legoH1s.css('line-height', $legoH1s.outerHeight()+'px');
+        }
+        if($legoH2s.length) {
+            $legoH2s.css('line-height', $legoH2s.outerHeight()+'px');
+        }
+        if($legoH3s.length) {
+            $legoH3s.css('line-height', $legoH3s.outerHeight()+'px');
+        }
+        if($legoH4s.length) {
+            $legoH4s.css('line-height', $legoH4s.outerHeight()+'px');
+        }
 
         resizeTimeout = false;
     }

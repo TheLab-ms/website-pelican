@@ -1,8 +1,10 @@
 <footer>
 	<div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
-	{% if page and page.save_as != 'home.html' %}
+	{% if not (page and page.save_as == 'index.html') %}
 		<div class="row">
-		{% include 'includes/legos.html' %}
+			<div class="col-lg-12">
+		{% include 'partials/legos.html' %}
+			</div>
 		</div>
 	{% endif %}
 		<hr>
