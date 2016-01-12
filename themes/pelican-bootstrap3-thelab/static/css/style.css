@@ -253,7 +253,6 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
 .text-white { color:#ffffff; }
 
 .bg-black { background-color:#000000; }
-.bg-black.hoverableblack:hover { background-color:#464646; }
 /*
 #7f7e7e
 #464646
@@ -261,7 +260,6 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
 #030101
 */
 .bg-magenta { background-color:#6c2940; }
-.bg-magenta.hoverable:hover { background-color:#88455b; }
 /*
 #a9687e
 #88455b
@@ -269,7 +267,6 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
 #360515
 */
 .bg-dark-blue { background-color:#403578; }
-.bg-dark-blue.hoverable:hover { background-color:#615795; }
 /*
 #8a82b3
 #615795
@@ -277,7 +274,6 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
 #130a3f
 */
 .bg-purple { background-color:#d93cf0; }
-.bg-purple.hoverable:hover { background-color:#e265f4; }
 /*
 #ec96f8
 #e265f4
@@ -285,7 +281,6 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
 #c102dc
 */
 .bg-dark-green { background-color:#135740; }
-.bg-dark-green.hoverable:hover { background-color:#287059; }
 /*
 #4a8c76
 #287059
@@ -293,7 +288,6 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
 #002418
 */
 .bg-grey { background-color:#808080; }
-.bg-grey.hoverable:hover { background-color:#acacac; }
 /*
 #dddcdc
 #acacac
@@ -301,7 +295,6 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
 #0a0a0a
 */
 .bg-medium-blue { background-color:#2697f0; }
-.bg-medium-blue.hoverable:hover { background-color:#4eabf2; }
 /*
 #7abff4
 #4eabf2
@@ -309,7 +302,6 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
 #0468b5
 */
 .bg-light-blue { background-color:#bfb4f8; }
-.bg-light-blue.hoverable:hover { background-color:#e7e2fe; }
 /*
 #ffffff
 #e7e2fe
@@ -317,7 +309,6 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
 #7966da
 */
 .bg-brown { background-color:#404b07; }
-.bg-brown.hoverable:hover { background-color:#616f1a; }
 /*
 #829136
 #616f1a
@@ -325,7 +316,6 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
 #101300
 */
 .bg-orange { background-color:#d9680f; }
-.bg-orange.hoverable:hover { background-color:#f18b39; }
 /*
 #ffa965
 #f18b39
@@ -333,7 +323,6 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
 #873c00
 */
 .bg-pink { background-color:#eca8bf; }
-.bg-pink.hoverable:hover { background-color:#f6cedb; }
 /*
 #fceef3
 #f6cedb
@@ -341,15 +330,38 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
 #b94c71
 */
 .bg-green { background-color:#26c30f; }
-.bg-green.hoverable:hover { background-color:#4dcb39; }
+.bg-green1 { background-color:#70da5f; }
+.bg-green1 a,
+.bg-green1 a:hover { color:#002418; }
+.bg-green2 { background-color:#4dcb39; color:#002418; }
+.bg-green3 { background-color:#1a9806; color:#edfcf6; }
+.bg-green4 { background-color:#107700; color:#edfcf6; }
 /*
 #70da5f
 #4dcb39
 #1a9806
 #107700
 */
+
+
+
+
+/*
+#4a8c76
+#287059
+#043c2a
+#002418
+*/
+
+
+/*
+#edfcf6
+#c3edde
+#65b89a
+#3f9a7a
+*/
+
 .bg-yellow { background-color:#bfca87; }
-.bg-yellow.hoverable:hover { background-color:#e7eebd; }
 /*
 #f6fae1
 #e7eebd
@@ -357,7 +369,6 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
 #7b8738
 */
 .bg-aqua { background-color:#93d6bf; }
-.bg-aqua.hoverable:hover { background-color:#c3edde; }
 /*
 #edfcf6
 #c3edde
@@ -365,7 +376,6 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
 #3f9a7a
 */
 .bg-white { background-color:#ffffff; }
-.bg-white.hoverable:hover { background-color:#ffffff; }
 /*
 #ffffff
 #ffffff
