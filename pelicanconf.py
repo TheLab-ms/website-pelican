@@ -33,3 +33,7 @@ DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+SITELOGO = 'images/logo.png'
+SITELOGO_SIZE = 128
+HIDE_SITENAME = True

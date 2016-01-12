@@ -21,6 +21,7 @@ $(document).ready(function() {
 
     window.setInterval(blinkLegoCursor, 800);
     $legos.on('mouseenter', 'a', function() {
+        $legoCursor.removeClass('display-none');
         if(typeof typeTimeout == "number") {
             window.clearTimeout(typeTimeout);
             typeTimeout = false;

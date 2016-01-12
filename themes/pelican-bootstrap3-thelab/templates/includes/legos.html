@@ -1,10 +1,18 @@
         <section class="lego-area">
-            <h2 class="lego-title">I want to <span id="lego-cmd"></span><span id="lego-cursor">|</span></h2>
+            <h2 class="lego-title">I want to <span id="lego-cmd">
+            {% if not (page and page.save_as == 'home.html') %}
+                ...
+            {% endif %}
+            </span><span id="lego-cursor" class="
+            {% if not (page and page.save_as == 'home.html') %}
+                display-none
+            {% endif %}
+                ">|</span></h2>
             <ul id="legos" class="legos">
                 <li class="lego lego-w1 lego-h1 lego-x1 lego-y1"><a href="/make.html" class="bg-magenta text-white">make</a></li>
                 <li class="lego lego-w1 lego-h1 lego-x2 lego-y1"><a href="/learn.html" class="bg-purple text-light-blue">learn</a></li>
                 <li class="lego lego-w2 lego-h1 lego-x3 lego-y1"><a href="/teach.html" class="bg-dark-green text-">teach</a></li>
-                <li class="lego lego-w2 lego-h1 lego-x1 lego-y2"><a href="/give.html" class="bg-medium-blue text-">give</a></li>
+                <li class="lego lego-w2 lego-h1 lego-x1 lego-y2"><a href="/donate.html" class="bg-medium-blue text-">give</a></li>
                 <li class="lego lego-w1 lego-h2 lego-x3 lego-y2"><a href="/visit.html" class="bg-light-blue text-">visit</a></li>
                 <li class="lego lego-w1 lego-h1 lego-x4 lego-y2"><a href="/join.html" class="bg-orange text-">join</a></li>
                 <li class="lego lego-w1 lego-h2 lego-x1 lego-y3"><a href="/brew.html" class="bg-orange text-">brew</a></li>

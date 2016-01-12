@@ -14,27 +14,13 @@
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-            <!--
-                {% for title, link in MENUITEMS %}
-                    <li><a href="{{ link }}">{{ title }}</a></li>
-                {% endfor %}
-                {% if DISPLAY_PAGES_ON_MENU %}
-                    {% for p in PAGES %}
-                         <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">
-                             {{ p.menulabel|default(p.title) }}
-                          </a></li>
-                      {% endfor %}
-                {% endif %}
-                {% if DISPLAY_CATEGORIES_ON_MENU %}
-                    {% for cat, null in categories %}
-                        <li {% if cat == category %}class="active"{% endif %}>
-                            <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat | capitalize }}</a>
-                        </li>
-                    {% endfor %}
-                {% endif %}
-                -->
+                <li><a href="{{ SITEURL }}/about.html">About</a></li>
+                <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}">Blog</a></li>
+                <li><a href="{{ SITEURL }}/contact.html">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+              <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}"><i class="fa fa-facebook-square"></i><span class="sr-only icon-label">facebook</span></a></li>
+              <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}"><i class="fa fa-twitter-square"></i><span class="sr-only icon-label">twitter</span></a></li>
             {% if 'tipue_search' in PLUGINS %}
               <li><span>
                 <form class="navbar-search" action="{{ SEARCH_URL | default('/search.html') }}">
@@ -42,7 +28,6 @@
                 </form></span>
               </li>
             {% endif %}
-              <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

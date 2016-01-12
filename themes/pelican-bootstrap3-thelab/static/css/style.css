@@ -266,6 +266,7 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; }
 
 .legos { display:block; position:relative; width:80%; height:20rem; margin:0.5rem auto 2rem; font-size:1.2rem; }
 .lego-title { font-size:6rem; height:1.2em; overflow:hidden; }
+.display-none { display:none; }
 .lego a { display:block; width:100%; height:100%; text-decoration:none; text-align:center; font-size:3em; }
 .lego a:hover { text-decoration:none; }
 .lego-h1 a { line-height:4.6rem; }
