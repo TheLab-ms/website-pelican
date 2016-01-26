@@ -1,13 +1,24 @@
         <section class="meetup-area">
             <h3>MEETUP</h3>
-            <ul id="meetup-events" class="meetup-events">
-                <li class="meetup-event meetup-event-template">
-                    <h4 class="meetup-event-title">
-                        <a class="meetup-event-link" href="">Title</a>
-                    </h4>
-                    <time class="meetup-event-time" datetime=""></time>
-                    <date
-                    <div class="meetup-event-content"></div>
+            <ul id="meetup-events" class="row meetup-events">
+                <li class="col-lg-4 col-md-6 meetup-event-wrapper meetup-event-template">
+                    <div class="meetup-event">
+                        <h4 class="meetup-event-title">
+                            <a class="meetup-event-link" href="">Loading events...</a>
+                        </h4>
+                        <time class="meetup-event-time" datetime=""></time>
+                        <div class="meetup-event-location">
+                            At <a href="" class="meetup-event-location-link"><span class="meetup-event-location-name"></span> <i class="fa fa-location-arrow"></i></a>
+                        </div>
+
+                        <div class="meetup-event-content-wrapper meetup-event-limited-height">
+                            <div class="meetup-event-content "></div>
+                            <a href="Javascript:void(0);" class="meetup-event-show-more">
+                                <span class="meetup-event-show-more-text">More <i class="fa fa-chevron-down"></i></span>
+                                <span class="meetup-event-show-less-text">Less <i class="fa fa-chevron-up"></i></span>
+                            </a>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </section>

@@ -88,7 +88,7 @@ $(document).ready(function() {
 
     function doMeetup() {
         var $meetupEvents = $('#meetup-events'),
-            $meetupEventTemplate = $meetupEvents.children('.meetup-event-template');
+            $meetupEventTemplate = $meetupEvents.children('.meetup-event-template').remove().removeClass('meetup-event-template');
         if($meetupEvents.length) {
             theLabMeetup.setup = function() {
                 var meetupScript = document.createElement('script');
@@ -100,9 +100,9 @@ $(document).ready(function() {
                 var $newEvent,
                     eventTimestamp,
                     eventDate,
-                    daysOfWeek = [ 'Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat' ],
-                    months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ];
-                for(var i = 0; i < data.results.length; i++) {
+                    daysOfWeek = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ],
+                    months = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
+                for(var i = 0; i < Math.min(12, data.results.length); i++) {
                     $newEvent = $meetupEventTemplate.clone();
                     $newEvent.find('.meetup-event-title .meetup-event-link').html(data.results[i].name);
                     $newEvent.find('.meetup-event-link').attr('href', data.results[i].event_url);
@@ -111,16 +111,30 @@ $(document).ready(function() {
                     eventDate = new Date(eventTimestamp);
 
                     $newEvent.find('.meetup-event-time').html(
-                        daysOfWeek[eventDate.getDay()] + ' ' +
-                        eventDate.getDate() + ' ' +
+                        daysOfWeek[eventDate.getDay()] + ', ' +
                         months[eventDate.getMonth()] + ' ' +
-                        eventDate.getFullYear() + ' at ' +
+                        eventDate.getDate() + /* ' ' +
+                        eventDate.getFullYear() + */ ' at ' +
                         (eventDate.getHours()%12) + ':' +
                         (eventDate.getMinutes() < 10 ? '0' : '') +
                         eventDate.getMinutes() + ' ' +
                         (eventDate.getHours() >= 12 ? 'PM' : 'AM')
+                    ).attr('datetime',
+                        eventDate.getFullYear() + '-' +
+                        (eventDate.getMonth() < 10 ? '0' : '') +
+                        eventDate.getMonth() + '-' +
+                        (eventDate.getDate() < 10 ? '0' : '') +
+                        eventDate.getDate() + 'T' +
+                        (eventDate.getHours() < 10 ? '0' : '') +
+                        eventDate.getHours() + ':' +
+                        (eventDate.getMinutes() < 10 ? '0' : '') +
+                        eventDate.getMinutes()
                     );
-                    // $newEvent.find('.meetup-event-').html(data.results[i].);
+                    $newEvent.find('.meetup-event-location-name').html(data.results[i].venue.name);
+                    $newEvent.find('.meetup-event-location-link').attr('href',
+                        'https://www.google.com/maps/search/'+encodeURIComponent(data.results[i].venue.address_1+' '+data.results[i].venue.city+', '+data.results[i].venue.state) // '1915+N+Central+Expy+Ste+370'
+                        // 'https://www.google.com/maps/place/@'+data.results[i].venue.lat+','+data.results[i].venue.lon+',17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0'
+                    );
                     // $newEvent.find('.meetup-event-').html(data.results[i].);
                     // $newEvent.find('.meetup-event-').html(data.results[i].);
                     // $newEvent.find('.meetup-event-').html(data.results[i].);
@@ -129,6 +143,15 @@ $(document).ready(function() {
                     $meetupEvents.append($newEvent);
                 }
             };
+
+            $meetupEvents.on('click', '.meetup-event-show-more', function() {
+                $(this).removeClass('meetup-event-show-more').addClass('meetup-event-show-less')
+                    .parents('.meetup-event-content-wrapper').removeClass('meetup-event-limited-height');
+            });
+            $meetupEvents.on('click', '.meetup-event-show-less', function() {
+                $(this).removeClass('meetup-event-show-less').addClass('meetup-event-show-more')
+                    .parents('.meetup-event-content-wrapper').addClass('meetup-event-limited-height');
+            });
             theLabMeetup.setup();
         }
 

@@ -425,3 +425,33 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
     .lego a { font-size:1.5rem; }
 }
 
+.meetup-events { list-style-type:none; padding-left:0; }
+.meetup-event { padding:10px; margin-bottom:30px; border:1px solid #9daa5b; background-color:#fff; }
+.meetup-event-template { display:none; }
+.meetup-event-title { margin-top:0; height:2.4em; line-height:1.2;}
+.meetup-event-content-wrapper {
+    margin-top:1em;
+    min-height:7em;
+    max-height:30em;
+    height:auto;
+    position:relative;
+    -webkit-transition: height 0.5s;
+    transition: max-height 0.5s;
+    overflow:hidden;
+}
+.meetup-event-limited-height {
+    max-height:7em;
+}
+.meetup-event-content { padding-bottom:2em; }
+.meetup-event-show-less,
+.meetup-event-show-more {
+    display:block;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background-color:#bfca87;
+    text-align:center;
+}
+.meetup-event-show-less .meetup-event-show-more-text,
+.meetup-event-show-more .meetup-event-show-less-text { display:none; }
