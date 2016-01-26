@@ -107,9 +107,19 @@ $(document).ready(function() {
                     $newEvent.find('.meetup-event-title .meetup-event-link').html(data.results[i].name);
                     $newEvent.find('.meetup-event-link').attr('href', data.results[i].event_url);
                     $newEvent.find('.meetup-event-content').html(data.results[i].description);
-                    eventTimestamp = data.results[i].time + data.results[i].utc_offset;
+                    eventTimestamp = data.results[i].time; // + data.results[i].utc_offset;
                     eventDate = new Date(eventTimestamp);
-                    $newEvent.find('.meetup-event-time').html(data.results[i].);
+
+                    $newEvent.find('.meetup-event-time').html(
+                        daysOfWeek[eventDate.getDay()] + ' ' +
+                        eventDate.getDate() + ' ' +
+                        months[eventDate.getMonth()] + ' ' +
+                        eventDate.getFullYear() + ' at ' +
+                        (eventDate.getHours()%12) + ':' +
+                        (eventDate.getMinutes() < 10 ? '0' : '') +
+                        eventDate.getMinutes() + ' ' +
+                        (eventDate.getHours() >= 12 ? 'PM' : 'AM')
+                    );
                     // $newEvent.find('.meetup-event-').html(data.results[i].);
                     // $newEvent.find('.meetup-event-').html(data.results[i].);
                     // $newEvent.find('.meetup-event-').html(data.results[i].);
