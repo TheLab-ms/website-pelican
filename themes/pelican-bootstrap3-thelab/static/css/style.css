@@ -442,7 +442,7 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
 .meetup-event-limited-height {
     max-height:7em;
 }
-.meetup-event-content { padding-bottom:2em; }
+.meetup-event-content { padding-bottom:4em; }
 .meetup-event-show-less,
 .meetup-event-show-more {
     display:block;
@@ -452,6 +452,31 @@ body { font-family:'Roboto Slab'; font-size:16px; letter-spacing:0.3px; backgrou
     left:0;
     background-color:#bfca87;
     text-align:center;
+    box-shadow:0 -10px 10px 4px rgba(255, 255, 255, 0.9);
+}
+.meetup-event-view-on-meetup {
+    display:block;
+    box-sizing:border-box;
+    padding:4px 0 6px;
+    width:100%;
+    position:absolute;
+    bottom:1.4em;
+    left:0;
+    background-color:#fff;
+    text-align:center;
+    box-shadow:0 -10px 10px 4px rgba(255, 255, 255, 0.9);
+}
+
+.meetup-event-limited-height .meetup-event-view-on-meetup { display:none; }
+.meetup-event-show-less {
+    box-shadow:0 0 0 0 transparent;
+}
+.entry-content a.meetup-event-view-on-meetup,
+.entry-content a.meetup-event-view-on-meetup:hover {
+    border:0 none transparent;
+}
+.entry-content a.meetup-event-view-on-meetup:hover {
+    text-decoration:underline;
 }
 .meetup-event-show-less .meetup-event-show-more-text,
 .meetup-event-show-more .meetup-event-show-less-text { display:none; }
