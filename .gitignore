@@ -1,0 +1,14 @@
+# Compiled Source
+*.pyc
+
+# Temp Files
+*.swp
+
+# Cache files
+/__pycache__
+/__pycache__/*
+
+# output files
+/output
+/output/*
+
