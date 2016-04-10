@@ -1,4 +1,4 @@
 [submodule "content"]
 	path = content
 	url = https://github.com/TheLab-ms/website-content.git
-	branch = 986b3901533ca114b5477727537422847a3840f3
+	branch = master
