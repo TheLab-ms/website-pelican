@@ -28,12 +28,17 @@ AUTHOR_FEED_RSS = None
 # Social widget
 #SOCIAL = (('You can add links in your config file', '#'),
 #          ('Another social link', '#'),)
+SOCIAL = (('twitter', 'https://twitter.com/TheLab_ms'),
+          ('facebook', 'https://www.facebook.com/thelabms/'),
+          ('github', 'https://github.com/TheLab-ms'),)
 
 DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
+STATIC_PATHS = ['images', 'pdfs']
+
 SITELOGO = 'images/logo.png'
-SITELOGO_SIZE = 128
+SITELOGO_SIZE = 192
 HIDE_SITENAME = True
