@@ -44,3 +44,4 @@ SITELOGO_SIZE = 192
 HIDE_SITENAME = True
 
 IGNORE_FILES = ['README.md','*.sh']
+THEME='themes/pelican-bootstrap3-thelab'
