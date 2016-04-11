@@ -42,3 +42,5 @@ STATIC_PATHS = ['images', 'pdfs']
 SITELOGO = 'images/logo.png'
 SITELOGO_SIZE = 192
 HIDE_SITENAME = True
+
+IGNORE_FILES = ['README.md','*.sh']
