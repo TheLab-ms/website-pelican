@@ -90,6 +90,28 @@ a, a:hover {
     border-bottom: 1px solid;
 }
 
+.img-left {
+    max-width: 25% !important;
+    height: auto;
+    float:left;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.img-right {
+    max-width: 25% !important;
+    height: auto;
+    float: right;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.entry-content h1, h2, h3 { clear:both;}
+
 .entry-content img {
     max-width: 80%;
     height: auto;
