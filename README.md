@@ -65,6 +65,17 @@ This can be done with the following command:
 git config --global status.submoduleSummary true
 ```
 
+## Template and Content variables
+Template files and content files can contain a number of different variables to be parsed by pelican.
+
+While you should not have to directly edit these most times you might have to use the variables for pathing relative to server root.
+
+The configuration file sets what the site url will be which may change based on if it is being published to production or a qa site.  For example production will all be starting at / like /images or http://thelab.ms/images but the qa site might start with /website-content/ line /website-content/images or http://thelab-ms.github.io/website-content/
+
+So in order to make sure internal links work properly you should use the {{ SITEURL }} variable on template pages and the {filename} variable on content pages.
+
+This is most important for content pages.  Do not simply create an internal link to content such as href="/images/abc.gif" and expect it to work!  Use the proper variable format of href="{filename}/images/abc.gif" and it will work fine.
+
 ## Output
 Pelican will create an output directory if it does not exist.
 
@@ -72,7 +83,7 @@ This is where all the static site generated content is created
 
 This directory will not be saved in this github repo due to the .gitignore settings
 
-## Generating Output and Previewing it
+## Generating Output and Previewing it locally
 Generating the output with Pelican is a one line command which tells Pelican where the content is located and which configuration file to use and which theme to use.  Here is the command you can use to generate the content:
 
 ```
@@ -87,3 +98,24 @@ python -m SimpleHTTPServer
 ```
 
 You can now preview your site by navigating to [http://localhost:8000](http://localhost:8000) in your browser.
+
+
+## Generating Output for QA and publishing it to the github QA site
+Generating the output for QA uses a different configuration file named qaconfig.py which has SITEURL set to http://thelab-ms.github.io/website-content/
+
+```
+pelican content -s qaconfig.py -t themes/pelican-bootstrap3-thelab
+```
+
+This will generate all the static page content into the output directory formated for the QA site.  The QA site is a secondary branch of the website-content repository names gh-pages
+
+In order to push content to this secondary branch you must use the following git format:
+
+```
+git push origin gh-pages
+```
+
+Otherwise it works just like any other git repository.
+
+Once you push the QA output to the gh-pages repository you can preview your site by navigating to [http://thelab-ms.github.io/website-content/](http://thelab-ms.github.io/website-content/) in your browser.
+
