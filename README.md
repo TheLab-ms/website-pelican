@@ -119,3 +119,11 @@ Otherwise it works just like any other git repository.
 
 Once you push the QA output to the gh-pages repository you can preview your site by navigating to [http://thelab-ms.github.io/website-content/](http://thelab-ms.github.io/website-content/) in your browser.
 
+# Publishing to an AWS S3 bucket
+
+On a linux box with s3cmd configured with a users API key the following command will publish the site to our S3 bucket
+
+```
+s3cmd sync ./output/ s3://thelab.ms --acl-public --delete-removed --guess-mime-type
+```
+
