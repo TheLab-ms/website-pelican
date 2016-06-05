@@ -102,7 +102,7 @@ $(document).ready(function() {
                     eventDate,
                     daysOfWeek = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ],
                     months = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
-                for(var i = 0; i < Math.min(12, data.results.length); i++) {
+                for(var i = 0; i < Math.min(6, data.results.length); i++) {
                     $newEvent = $meetupEventTemplate.clone();
                     $newEvent.find('.meetup-event-title .meetup-event-link').html(data.results[i].name);
                     $newEvent.find('.meetup-event-link').attr('href', data.results[i].event_url);
