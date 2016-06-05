@@ -115,7 +115,7 @@ $(document).ready(function() {
                         months[eventDate.getMonth()] + ' ' +
                         eventDate.getDate() + /* ' ' +
                         eventDate.getFullYear() + */ ' at ' +
-                        (eventDate.getHours()%12) + ':' +
+                        (eventDate.getHours()%12 == 0 ? '12' : eventDate.getHours()%12) + ':' +
                         (eventDate.getMinutes() < 10 ? '0' : '') +
                         eventDate.getMinutes() + ' ' +
                         (eventDate.getHours() >= 12 ? 'PM' : 'AM')
