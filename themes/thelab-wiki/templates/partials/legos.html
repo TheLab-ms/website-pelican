@@ -1,0 +1,43 @@
+        <section class="lego-area">
+            <h2 class="lego-title">I want to <span id="lego-cmd">
+            {% if not (page and page.save_as == 'index.html') %}
+                ...
+            {% endif %}
+            </span><span id="lego-cursor" class="
+            {% if not (page and page.save_as == 'index.html') %}
+                display-none
+            {% endif %}
+                ">|</span></h2>
+            <ul id="legos" class="legos">
+                <li class="lego lego-w1 lego-h1 lego-x1 lego-y1">
+                    <a href="{{ SITEURL }}/make.html" class="bg-green4 text- hoverable">make</a>
+                </li>
+                <li class="lego lego-w1 lego-h1 lego-x2 lego-y1">
+                    <a href="{{ SITEURL }}/learn.html" class="bg-green1 text- hoverable">learn</a>
+                </li>
+                <li class="lego lego-w2 lego-h1 lego-x3 lego-y1">
+                    <a href="{{ SITEURL }}/teach.html" class="bg-green3 text- hoverable">teach</a>
+                </li>
+                <li class="lego lego-w2 lego-h1 lego-x1 lego-y2">
+                    <a href="{{ SITEURL }}/donate.html" class="bg-green3 text- hoverable">give</a>
+                </li>
+                <li class="lego lego-w1 lego-h2 lego-x3 lego-y2">
+                    <a href="{{ SITEURL }}/visit.html" class="bg-green2 text- hoverable">visit</a>
+                </li>
+                <li class="lego lego-w1 lego-h1 lego-x4 lego-y2">
+                    <a href="{{ SITEURL }}/join.html" class="bg-green4 text- hoverable">join</a>
+                </li>
+                <li class="lego lego-w1 lego-h2 lego-x1 lego-y3">
+                    <a href="{{ SITEURL }}/brew.html" class="bg-green1 text- hoverable">brew</a>
+                </li>
+                <li class="lego lego-w1 lego-h1 lego-x2 lego-y3">
+                    <a href="{{ SITEURL }}/hack.html" class="bg-green4 text- hoverable">hack</a>
+                </li>
+                <li class="lego lego-w1 lego-h1 lego-x4 lego-y3">
+                    <a href="{{ SITEURL }}/help.html" class="bg-green1 text- hoverable">help</a>
+                </li>
+                <li class="lego lego-w3 lego-h1 lego-x2 lego-y4">
+                    <a href="{{ SITEURL }}/participate.html" class="bg-green3 text- hoverable">participate</a>
+                </li>
+            </ul>
+        </section>
