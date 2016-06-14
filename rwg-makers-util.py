@@ -8,6 +8,7 @@ my_content_dir = "../website-makers"
 my_prod_config = "makersconf.py"
 my_theme =       "themes/thelab-makers"
 my_output =       "output"
+my_output_sub =   "/makers"
 #my_qa_config =   "qaconfig.py"
 #my_qa_pubdir =   "../qa/website-content"
 
@@ -83,10 +84,10 @@ def start_server (handler):
 
 print "*****************************************************************"
 print "*** Choose between the following options:                     ***"
-print "*** G = Generate output using Prod WIKI config file           ***"
+print "*** G = Generate output using Prod makers config file           ***"
 print "*** L = Launch a local webserver localhost:8000 with output   ***"
 #print "*** Q = Generate output using QA config and publish to GHPage ***"
-print "*** P = Generate output with Prod WIKI config + publish to AWS ***"
+print "*** P = Generate output with Prod makers config + publish to AWS ***"
 print "*****************************************************************"
 option = raw_input("Enter Option >")
 #if option.upper() in "GLPQ":
@@ -101,8 +102,8 @@ else:
   exit()
 
 if option.upper() == "G":
-  # Generate output using Prod WIKI config file
-  print "*** Generate output using Prod WIKI config file ***\n"
+  # Generate output using Prod makers config file
+  print "*** Generate output using Prod makers config file ***\n"
   subprocess.call(["pelican", my_content_dir, "-s", my_prod_config, "-t", my_theme])
 
 if option.upper() == "L":
@@ -132,13 +133,13 @@ if option.upper() == "L":
 #  print "*** DONE - QA Site Now Updated - Visit It HERE: http://thelab-ms.github.io/website-content/ ***"
 
 if option.upper() == "P":
-  # Generate output using Prod WIKI config file
-  print "*** Generate output using Prod WIKI config file ***\n"
+  # Generate output using Prod makers config file
+  print "*** Generate output using Prod makers config file ***\n"
   subprocess.call(["pelican", my_content_dir, "-s", my_prod_config, "-t", my_theme])
-  # Publish Prod WIKI site to AWS S3 bucket
-  print "*** Publish Prod WIKI site to AWS S3 bucket ***\n"
-#  subprocess.call(["s3cmd", "sync", "./" + my_output + "/", "s3://thelab.ms", "--acl-public", "--delete-removed", "--guess-mime-type"])
-#  print "*** DONE - Prod Site Now Updated - Visit It HERE: https://thelab.ms/ ***"
+  # Publish Prod makers site to AWS S3 bucket
+  print "*** Publish Prod makers site to AWS S3 bucket ***\n"
+  subprocess.call(["s3cmd", "sync", "./" + my_output + my_output_sub + "/", "s3://thelab.ms.makers", "--acl-public", "--delete-removed", "--guess-mime-type"])
+  print "*** DONE - Prod makers Site Now Updated - Visit It HERE: https://thelab.ms/makers/ ***"
 
 print "*********************"
 print "*** END OF SCRIPT ***"

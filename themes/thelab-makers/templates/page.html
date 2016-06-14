@@ -61,4 +61,11 @@
             {% endif %}
         </div>
     </section>
+    <script>
+    var tables, i;
+    tables = document.getElementsByTagName('table');
+    for (i=0;i<tables.length;i++) {
+      tables[i].className = 'table table-condensed table-hover';
+    }
+    </script>
 {% endblock %}
