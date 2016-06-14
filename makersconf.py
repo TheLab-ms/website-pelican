@@ -10,16 +10,17 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = '/wiki'
+SITEURL = '/makers'
 RELATIVE_URLS = False
-OUTPUT_PATH = 'output/wiki/'
+OUTPUT_PATH = 'output/makers/'
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
+IGNORE_FILES = ['README.md','*.sh','convert']
 # Following items are often useful when publishing
 
 #DISQUS_SITENAME = ""
-#GOOGLE_ANALYTICS = ""
+GOOGLE_ANALYTICS = "UA-48974947-1"

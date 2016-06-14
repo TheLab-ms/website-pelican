@@ -7,7 +7,7 @@ my_current_dir = "website-pelican"
 my_content_dir = "../website-makers"
 my_prod_config = "makersconf.py"
 my_theme =       "themes/thelab-makers"
-my_output =       "output/makers"
+my_output =       "output"
 #my_qa_config =   "qaconfig.py"
 #my_qa_pubdir =   "../qa/website-content"
 
