@@ -138,7 +138,7 @@ if option.upper() == "P":
   subprocess.call(["pelican", my_content_dir, "-s", my_prod_config, "-t", my_theme])
   # Publish Prod makers site to AWS S3 bucket
   print "*** Publish Prod makers site to AWS S3 bucket ***\n"
-  subprocess.call(["s3cmd", "sync", "./" + my_output + my_output_sub + "/", "s3://thelab.ms.makers", "--acl-public", "--delete-removed", "--guess-mime-type"])
+  subprocess.call(["s3cmd", "sync", "./" + my_output + "/", "s3://thelab.ms.makers", "--acl-public", "--delete-removed", "--guess-mime-type"])
   print "*** DONE - Prod makers Site Now Updated - Visit It HERE: https://thelab.ms/makers/ ***"
 
 print "*********************"
