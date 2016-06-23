@@ -38,7 +38,7 @@ DEFAULT_PAGINATION = False
 #RELATIVE_URLS = True
 
 STATIC_PATHS = ['images', 'pdfs']
-PAGE_PATHS = ['pages', 'tap']
+PAGE_PATHS = ['pages', 'tap', 'slingfest']
 
 SITELOGO = 'images/logo.png'
 SITELOGO_SIZE = 192
