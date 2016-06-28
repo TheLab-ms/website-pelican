@@ -46,3 +46,4 @@ HIDE_SITENAME = True
 
 IGNORE_FILES = ['README.md','*.sh']
 THEME='themes/pelican-bootstrap3-thelab'
+FAVICON = 'images/favicon.ico'
